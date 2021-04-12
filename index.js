@@ -8,9 +8,9 @@ require('dotenv').config();
 
 //dpu
 //d1p2u3valo
-const uri = `mongodb+srv://${process.env.REACT_APP_DB_USER}:${process.env.REACT_APP_DB_PASS}@cluster0.pjygh.mongodb.net/${process.env.REACT_APP_DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.pjygh.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
-console.log(process.env.REACT_APP_PORT);
+console.log(process.env.PORT);
 
 
 
@@ -173,5 +173,4 @@ client.connect((err) => {
 
 });//client.connect
 
-
-app.listen(process.env.REACT_APP_PORT|| port)
+app.listen(process.env.PORT|| 5000)
